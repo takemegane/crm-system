@@ -31,7 +31,6 @@ const navigationSections: NavigationSection[] = [
       { name: 'アーカイブ済み顧客', href: '/dashboard/customers/archived', current: false },
       { name: 'コース管理', href: '/dashboard/courses', current: false },
       { name: 'タグ管理', href: '/dashboard/tags', current: false },
-      { name: 'Month Challenge', href: '/dashboard/challenge', current: false },
     ]
   },
   {
@@ -106,9 +105,6 @@ export default function Sidebar() {
       return session?.user?.role && hasPermission(session.user.role as UserRole, 'VIEW_PRODUCTS')
     }
     if (href === '/dashboard/orders') {
-      return session?.user?.role && hasPermission(session.user.role as UserRole, 'VIEW_CUSTOMERS')
-    }
-    if (href === '/dashboard/challenge') {
       return session?.user?.role && hasPermission(session.user.role as UserRole, 'VIEW_CUSTOMERS')
     }
     if (href === '/dashboard/shipping-rates') {

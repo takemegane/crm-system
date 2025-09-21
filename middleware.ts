@@ -36,8 +36,7 @@ export default withAuth(
         '/api/orders',
         '/api/customer-profile',
         '/api/customer-enrollments',
-        '/api/calculate-shipping',
-        '/api/entries'
+        '/api/calculate-shipping'
       ]
       
       const isAdminAPI = adminAPIPatterns.some(pattern => 
@@ -185,7 +184,6 @@ export const config = {
     '/api/calculate-shipping/:path*',
     '/api/debug-products/:path*',
     '/api/migrate-payment-fields/:path*',
-    '/api/payment-settings/:path*',
-    '/api/entries/:path*'
+    '/api/payment-settings/:path*'
   ]
 }
